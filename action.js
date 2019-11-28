@@ -1,5 +1,5 @@
 class Action {
-    constructor(name, rules = {}, {
+    constructor(name, {rules}, {
         use =  () => {}
     }) {
         this.name = name
@@ -8,6 +8,7 @@ class Action {
     }
 
     use(members = {}) {
+        console.log(this.rules)
         this._use(this.rules, members)
     }
 }
