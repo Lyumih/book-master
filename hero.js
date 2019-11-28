@@ -1,11 +1,8 @@
 class Hero {
-    constructor(name, props = []) {
+    constructor(name="No name", props = []) {
         this.name = name
         props.forEach(prop => this[prop] = undefined)
     }
 }
 
-// создание новых любых свойств персонажа
-let props = ["health", "damage", "armor", "skills"]
-let me = new Hero("I", props)
-console.log(me)
+exports.Hero = Hero

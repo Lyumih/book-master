@@ -7,6 +7,4 @@ class Engine {
     }
 }
 
-const engine = new Engine("Dota Engine")
-
-console.log(engine)
+exports.Engine = Engine
