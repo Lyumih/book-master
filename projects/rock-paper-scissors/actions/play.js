@@ -1,6 +1,6 @@
-function play({action}, {hero, enemy}) {
-    hero.result = action()
-    enemy.result = action()
+function play({rule}, {hero, enemy}) {
+    hero.result = rule()
+    enemy.result = rule()
     if (hero.result === enemy.result) {
         hero.win = true
         enemy.win = true
