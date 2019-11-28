@@ -1,8 +1,13 @@
 class Action {
-    constructor(name, members = [], use = function () {}) {
+    constructor(name, rules = {}, use = function () {
+    }) {
         this.name = name
-        this.members = members
-        this.use = use
+        this.rules = rules
+        this._use = use
+    }
+
+    use(members = {}) {
+        this._use(this.rules, members)
     }
 }
 
