@@ -1,6 +1,5 @@
-const {Hero} = require('./hero')
-const {Action} = require('./action')
-const {Engine} = require('./engine')
+let {Engine, Hero, Action, Rule} = require('./world')
+
 
 console.log('Loaded')
 
@@ -9,9 +8,7 @@ function helloWorld(text) {
 }
 
 let hero = new Hero("Мой герой")
-let action = new Action("Моё действие", [], function (name) {
-console.log('my name')
-})
+let action = new Action("Моё действие", [], helloWorld)
 let engine = new Engine("Мир", [hero], [action])
 
 
@@ -20,3 +17,5 @@ let engine = new Engine("Мир", [hero], [action])
 
 action.use()
 engine.actions[0].use("Привет. Мир")
+
+

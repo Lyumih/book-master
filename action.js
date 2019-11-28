@@ -1,5 +1,6 @@
 class Action {
-    constructor(name, rules = {}, use = function () {
+    constructor(name, rules = {}, {
+        use =  () => {}
     }) {
         this.name = name
         this.rules = rules
