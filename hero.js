@@ -5,8 +5,6 @@ class Hero {
     }
 }
 
-export default Hero
-
 // создание новых любых свойств персонажа
 let props = ["health", "damage", "armor", "skills"]
 let me = new Hero("I", props)
