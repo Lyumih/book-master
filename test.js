@@ -1,7 +1,8 @@
-console.log('work')
+const assert = require('assert')
 
-let {Engine, Hero, Action, Rule} = require('./world')
+it('должно возвращать true', () => {
+    assert.equal(true, true)
+})
 
-console.log(Engine, Hero,Action,Rule)
-
-let hero = new Hero
+// console.log(assert)
+console.log('test')

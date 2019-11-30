@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Lyumih/book-master/issues"
   },
-  "homepage": "https://github.com/Lyumih/book-master#readme"
+  "homepage": "https://github.com/Lyumih/book-master#readme",
+  "dependencies": {
+    "mocha": "^6.2.2"
+  }
 }
