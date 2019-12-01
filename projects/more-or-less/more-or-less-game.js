@@ -3,7 +3,7 @@ const {Engine, Hero, Action, Rule} = require('../../world')
 const {randomInt} = require('./rules/random-rule')
 const {inputNumber} = require('./actions/input-number')
 
-let heroParams = ['number']
+let heroParams = {number: undefined}
 
 let hero = new Hero("Герой", heroParams)
 let enemy = new Hero("Враг", heroParams)
