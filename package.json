@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Lyumih/book-master#readme",
   "dependencies": {
     "mocha": "^6.2.2"
+  },
+  "devDependencies": {
+    "nyc": "^14.1.1"
   }
 }
