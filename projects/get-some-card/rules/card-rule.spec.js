@@ -6,7 +6,7 @@ describe("get-some-card", () => {
 
     describe("card-rule", () => {
 
-        xit('Случайное число должно быть больше 0', () => {
+        xit('Вытянуты правильные карты', () => {
             for (let i = 0; i < 30; i++) {
                 let number = randomInt()
                 assert.equal(number >= 0, true)

@@ -1,10 +1,13 @@
 const cards = {
     suits: ["Бубны", "Червы", "Пики", "Трефы"],
-    values: ["6", "7", "8", "9", "10", "Валет", "Дама", "Кароль", "Туз"]
+    values: ["6", "7", "8", "9", "10", "Валет", "Дама", "Король", "Туз"]
 }
 
 const randomCard = () => {
-    return {value: cards.values[0], suit: cards.suits[0]}
+    return {
+        value: cards.values[Math.floor(Math.random() * cards.values.length)],
+        suit: cards.suits[Math.floor(Math.random() * cards.suits.length)]
+    }
 }
 
 module.exports = {
