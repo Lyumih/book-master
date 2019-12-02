@@ -12,7 +12,7 @@ let randomItemRule = new Rule("Задаёт рандомный предмет", 
 let playAction = new Action("Сыграть в камень, ножницы, бумагу", randomItemRule, {use: play}, ['result', 'win'])
 let engine = new Engine("Камень Ножницы Бумага", [hero, enemy], [playAction])
 
-console.log(`Мир: ${engine.name}`)
+engine.welcome()
 playAction.use({hero, enemy})
 playAction.use({hero, enemy})
 playAction.use({hero, enemy})

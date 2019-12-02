@@ -5,6 +5,10 @@ class Engine {
         this.actions = actions
         this.rules = rules
     }
+
+    welcome() {
+        console.log(`Добро пожаловать в мир: ${this.name}`)
+    }
 }
 
 exports.Engine = Engine

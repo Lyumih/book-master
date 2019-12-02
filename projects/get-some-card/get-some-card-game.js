@@ -8,7 +8,7 @@ const randomCardRule = new Rule('Получает случайную карту'
 const getCardAction = new Action("Герой получает случайную карту", randomCardRule, {use: getCard}, ["cards"])
 
 const engine = new Engine("Вытяни карту", [hero], [getCardAction], [randomCard])
-console.log(`Мир: ${engine.name}`)
+engine.welcome()
 console.log(hero)
 
 getCardAction.use({hero})
