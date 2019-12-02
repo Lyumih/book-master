@@ -15,5 +15,7 @@ let inputNumberAction = new Action("Ввести число и попробов�
 let engine = new Engine("Больше или Меньше", [hero, enemy], [inputNumberAction], [randomIntRule])
 
 console.log(`Мир: ${engine.name}`)
-inputNumberAction.use({hero, enemy})
+while (true) {
+    inputNumberAction.use({hero, enemy})
+}
 
