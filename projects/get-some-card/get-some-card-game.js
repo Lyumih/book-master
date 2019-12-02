@@ -1,6 +1,6 @@
 const {Engine, Hero, Action, Rule} = require('../../world')
 const {cards, randomCard} = require('./rules/card-rule')
-const {getCard} = require('./actions/get-card')
+const {getCard} = require('../points-21/actions/get-card')
 
 const hero = new Hero("Герой", {cards:[]})
 

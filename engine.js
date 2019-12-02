@@ -6,8 +6,8 @@ class Engine {
         this.rules = rules
     }
 
-    welcome() {
-        console.log(`Добро пожаловать в мир: ${this.name}`)
+    welcome(text = "Мир: ") {
+        console.log(`${text}${this.name}`)
     }
 }
 

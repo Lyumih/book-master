@@ -12,7 +12,7 @@ class Action {
     use(members = {}) {
         if (this.validate(members).length > 0) throw new Error(`Внимание! Для работы действия "${this.name}" 
 участникам необходимы ПАРАМЕТРЫ: <${this.validate(members).join(">, <")}. `)
-        this._use(this.rules, members)
+        return this._use(this.rules, members)
     }
 
     validate(members) {
