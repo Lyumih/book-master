@@ -9,6 +9,8 @@ class Engine {
     welcome(text = "Мир: ") {
         console.log(`${text}${this.name}`)
     }
+
+    //todo: возможно, движок должен уметь ещё обрабатывать входящий поток?
 }
 
 exports.Engine = Engine
