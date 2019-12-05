@@ -1,9 +1,6 @@
 class Controller {
-    constructor() {
-    }
-
-    next() {
-        return true
+    constructor(name) {
+        this.name = name
     }
 }
 

@@ -1,10 +1,6 @@
-const {Engine, Hero, Action, Rule} = require('./world')
+const { Engine, Hero, Action, Rule, Controller } = require('./world')
 
-let props = {
-    cards: [],
-    healths: 10
-}
+let controller = new Controller("Консоль")
 
-let hero = new Hero("Герой", props)
 
-console.log(hero)
+console.log(controller)
