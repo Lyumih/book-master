@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Устройства мира</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script defer src="./js/inspect.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h3>Создание своего мира игры</h3>
+    <div>
+      <input placeholder="Введите тектст нового элемента" style="width: 100%;" v-model="itemText">
+    </div>
+    <div>
+      <label for="exportToJson">Файл инспекции в JSON</label>
+      <textarea readonly id="exportToJson" cols="100%" rows="5">{{exportToJson}}</textarea>
+    </div>
+    <hr>
+    <table width="100%" border="1">
+      <caption>Мир: {{world}}</caption>
+      <tr>
+        <th>Params</th>
+        <th>Heroes</th>
+        <th>Rules</th>
+        <th>Actions</th>
+        <th>Logic</th>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td>
+          <button @click="params.push(itemText)">+</button>
+          <ol>
+            <li v-for="item, index in params" :key='index'>{{item}}</li>
+          </ol>
+        </td>
+        <td>
+          <button @click="heroes.push(itemText)">+</button>
+          <ol>
+            <li v-for="item, index in heroes" :key='index'>{{item}}</li>
+          </ol>
+        </td>
+        <td>
+          <button @click="rules.push(itemText)">+</button>
+
+          <ol>
+            <li v-for="item, index in rules" :key='index'>{{item}}</li>
+          </ol>
+        </td>
+        <td>
+          <button @click="actions.push(itemText)">+</button>
+
+          <ol>
+            <li v-for="item, index in actions" :key='index'>{{item}}</li>
+          </ol>
+        </td>
+        <td>
+          <button @click="logic.push(itemText)">+</button>
+          <ol>
+            <li v-for="item, index in logic" :key='index'>{{item}}</li>
+          </ol>
+        </td>
+      </tr>
+    </table>
+    <hr>
+    <div>
+      <p><code>Heroes - Герои</code> - является контейнером для параметров, сущностью чего-либо</p>
+      <p><code>Params - Параметры</code> - доступные параметры в данном мире</p>
+      <p><code>Rules - Правила</code> - является допустимыми константами в данном мире. Обрабатываются в действиях</p>
+      <p><code>Actions - Действия</code> - является обработчиками правил и использованием их на героях</p>
+      <p><code>Logic - Логика</code> - является логикой программы</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
