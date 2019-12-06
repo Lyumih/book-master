@@ -14,10 +14,15 @@ let app = new Vue({
   },
   computed: {
     exportToJson() {
-      let { world, params, heroes, rules, actions, logic} = this
+      let { world, params, heroes, rules, actions, logic } = this
       return {
         world, params, heroes, rules, actions, logic
       }
+    }
+  },
+  methods: {
+    remove(array, index) {
+      this.$delete(array, index)
     }
   },
 })
